@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Grooming Booking</title>
+
+<style>
+body {
+    font-family: Times New Roman, sans-serif;
+font-size: 25px;
+    background-color:#d3f3f0;
+    background-image: url('file:///C:/Users/Suresh/Desktop/Project%20folder/ddcc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px;
+    background-color:#B0E0E6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+font-weight: bold;
+font-size: 20px;
+  color: black;
+  padding: 8px;
+  font-family: Times New Roman;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+background-color: green;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.24);
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+#confirmation {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+select {
+display: block;
+        width: 250px;
+        margin: 8px;
+font-weight: normal;
+font-size: 20px;
+padding: 8px;
+
+    }
+    select:focus {
+        min-width: 250px;
+        width: auto;
+    }
+    .bg{
+        background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 120%;
+    height: 160%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+  
+</style>
+</head>
+
+<body>
+    <img class="bg" src="pet_groom.jpg">
+    <div class="container">
+  <h2>Pet Grooming Form</h2>
+  <form action="pet_grooming.php" method="post">
+    
+	        <label for="owner_name">Owner's Name:</label>
+            <input type="text" name="owner_name" id="owner_name" required>
+
+            <label for="email">Email Id:</label>
+            <input type="text" name="email" id="email" required />
+
+            <label for="ph_no">Phone Number:</label>
+            <input type="number" name="ph_no" id="ph_no" required />
+
+            <label for="pet_name">Pet Name:</label>
+            <input type="text" id="pet_name" name="pet_name" required>
+    
+      <label for="animal">Animal:</label>
+      <select id="animal" name="animal" required>
+        <option value="">Select Type</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="other">Other</option>
+      </select>
+    
+      <label for="service">Service:</label>
+      <select id="service" name="service" required>
+        <option value="">Select Service</option>
+        <option value="bath">Bath</option>
+        <option value="haircut">Haircut</option>
+        <option value="nail_trim">Nail Trim</option>
+        <option value="other">Other</option>
+      </select>
+    
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+    
+      <label for="mess">Additional Comments:</label>
+      <textarea type="text" id="mess" name="mess"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>

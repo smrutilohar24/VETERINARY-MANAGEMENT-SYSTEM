@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Prescription</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: Times New Roman, sans-serif;
+font-size: 25px;
+    background-color:#53f0e3;
+    background-image: url('file:///C:/Users/Suresh/Desktop/Project%20folder/oresc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px;
+    background-color:#d5d3f2 ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+font-weight: bold;
+font-size: 20px;
+  color: black;
+  padding: 8px;
+  font-family: Times New Roman;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+background-color: green;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.24);
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+#confirmation {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+select {
+display: block;
+        width: 250px;
+        margin: 8px;
+font-weight: normal;
+font-size: 20px;
+padding: 8px;
+
+    }
+    select:focus {
+        min-width: 250px;
+        width: auto;
+    }
+    .bg{
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+</style>
+</head>
+<link rel="stylesheet" href="StyleSheet1.css" />
+<body>
+    <img class="bg" src="oresc.jpg">
+    <div class="container">
+        <h1>Veterinary Prescription</h1>
+        <form action="prescription.php" method="POST">
+            <label for="pet_name">Pet Name:</label>
+            <input type="text" id="pet_name" name="pet_name" required>
+
+            <label for="owner_name">Owner's Name:</label>
+            <input type="text" id="owner_name" name="owner_name" required>
+
+            <label for="medication">Medication:</label>
+            <textarea id="medication" name="medication" rows="4" required></textarea>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+            <label for="doctor_name">Prescribing Doctor:</label>
+            <input type="text" id="doctor_name" name="doctor_name" required>
+
+            <button type="submit">Prescribe</button>
+        </form>
+
+        <div id="confirmation"></div>
+    </div>
+    <script src="vacc.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Page</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Center the container horizontally */
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style headings */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Style labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style input fields */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style error messages */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Style the button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover */
+button:hover {
+  background-color: #45a049;
+}
+.bg{
+        background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+.bill {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.details {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.thank-you {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <img class="bg" src="pay.jpg">
+<div class="container">
+  <h2>Payment Details</h2>
+  <form id="paymentForm" action="payment.php" method="post">
+    <label for="owner_name">Owner Name:</label>
+            <input type="text" name="owner_name" id="owner_name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required />
+
+            <label for="pet_name">Pet Name:</label>
+            <input type="text" id="pet_name" name="pet_name" required>
+    <div class="form-group">
+      <label for="card_number">Card Number:</label>
+      <input type="text" id="card_number" name="card_number" required>
+      <small id="card_number_error" class="error"></small>
+    </div>
+    <div class="form-group">
+      <label for="expiry_date">Expiry Date:</label>
+      <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+      <small id="expiry_date_error" class="error"></small>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required>
+      <small id="cvv_error" class="error"></small>
+    </div>
+    <div class="form-group">
+      <label for="service">Select Service:</label>
+      <select id="service" name="service" required onchange="updateAmount()">
+        <option value="">Select Service</option>
+        <option value="appointment">Appointment</option>
+        <option value="vaccination">Vaccination</option>
+        <option value="pet_grooming">Pet Grooming</option>
+        <option value="online_consult">Online Consult</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" readonly required>
+    </div>
+    <button type="submit">Pay Now</button>
+  </form>
+</div>
+
+
+<script src="payment.js"></script>
+
+</body>
+</html>

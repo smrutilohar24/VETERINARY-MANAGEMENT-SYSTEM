@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Management System</title>
+    <style>
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+}
+h1{
+        line-height: 60px;
+        font-size: 40px;
+        text-transform:uppercase;
+        font-family: gilroy;
+        font-weight: 900;
+        letter-spacing: 1px;
+        color:rgb(243, 242, 247);
+      }
+      h2{
+        line-height: 50px;
+        font-size: 40px;
+        text-transform:capitalize;
+        font-family: gilroy;
+        font-weight: 900;
+        letter-spacing: 1px;
+        color:rgb(0, 0, 0);
+      }
+header {
+    
+    padding: 10px;
+    background-color: #4CAF50; /* Header background color */
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    gap:70px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #f6f6f8;
+    text-decoration: underline;
+    gap:70px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size:xx-large;
+    font-display:initial;
+}
+
+main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(50% - 40px); /* Adjust width as needed */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+        main section {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Add space between sections */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+
+}
+#booking-form {
+    background-color: #f8eeee; /* Light background color */
+}
+
+#prescription-refill {
+    background-color: #edcece; /* Slightly darker background color */
+}
+
+#pet-grooming {
+    background-color: #edcece; /* Slightly darker background color */
+}
+
+#vaccination-booking {
+    background-color: #edbdbd; /* Even darker background color */
+}
+
+#appointment-cancellation {
+    background-color: #e9aeae; /* Darkest background color */
+}
+main section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.bg{
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+p1{
+        line-height: 50px;
+        font-size: 30px;
+        text-transform: capitalize;
+        font-family: gilroy;
+        letter-spacing: 1px;
+        color:rgb(165, 0, 0);
+      }
+p{
+        line-height: 50px;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-family: gilroy;
+        letter-spacing: 1px;
+        color:white;
+      }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1px;
+    text-align: center; 
+
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>ONLINE BOOKING</h1>
+        <nav>
+            <ul>
+                <br>
+                <li><a href="appont.html"> Book Appointment     </a></li>
+                <li><a href="pet_grooming.html"> Pet Grooming   </a></li>
+                <li><a href="vacc.html"> Vaccination Booking     </a></li>
+                <li><a href="appcancel.html"> Cancel Appointment    </a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <img class="bg" src="obook.jpg">
+    <main>
+        <main>
+            <section id="booking-form">
+                <h2>Book Appointment</h2>
+                <p1>If you need to book your pet's appointment, please contact us.</p1>
+            </section>
+        <br>
+            <section id="prescription-refill">
+                <h2>Prescription Refill</h2>
+                <p1>Contact us to request a prescription for your pet.</p1>
+                <!-- Include contact information or a form for prescription refill requests -->
+            </section>
+        <br>
+        <section id="pet-grooming">
+            <h2>Pet Grooming</h2>
+            <p1>Schedule the pet-grooming online for your pet.</p1>
+            <!-- Include contact information or a form for prescription refill requests -->
+        </section>
+    <br>
+            <section id="vaccination-booking">
+                <h2>Vaccination Booking</h2>
+                <p1>Schedule your pet's vaccinations online for your convenience.</p1>
+                <!-- Include a form or link to schedule vaccination appointments -->
+            </section>
+        <br>
+            <section id="appointment-cancellation">
+                <h2>Cancel Appointment</h2>
+                <p1>If you need to cancel your pet's appointment, please contact us.</p1>
+                <!-- Include contact information or a form for appointment cancellation -->
+            </section>
+        </main>
+         
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Veterinary Management System</p>
+    </footer>
+</body>
+</html>

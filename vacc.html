@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Vaccination Booking</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: Times New Roman, sans-serif;
+font-size: 25px;
+    background-color:#e4f9f7;
+    background-image: url('file:///C:/Users/Suresh/Desktop/Project%20folder/bg.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px;
+    background-color:#f4d1e5 ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+font-weight: bold;
+font-size: 20px;
+  color: black;
+  padding: 8px;
+  font-family: Times New Roman;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+background-color: green;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.24);
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+#confirmation {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+select {
+display: block;
+        width: 250px;
+        margin: 8px;
+font-weight: normal;
+font-size: 20px;
+padding: 8px;
+
+    }
+    select:focus {
+        min-width: 250px;
+        width: auto;
+    }
+    .bg{
+        background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+  
+</style>
+</head>
+<link rel="stylesheet" href="StyleSheet1.css" />
+<body>
+    <img class="bg" src="bg.jpeg" >
+    <div class="container">
+        <h1>Veterinary Vaccination Booking</h1>
+        <form id="vaccinationForm" method="post" action="vacc.php">
+
+            <label for="petName">Pet Name:</label> 
+            <input type="text" name="pet_name" id="pet_name" required> 
+            
+            <label for="petBreed">Pet Breed:(optional)</label>
+            <input type="text" name="pet_breed" id="pet_breed" optional>
+
+	    <label for="animal">Animal:</label>
+            <select name="animal" id="animal"> 
+            <option value="dog">Dog</option> 
+            <option value="cat">Cat</option> 
+            <option value="bird">Bird</option> 
+            <option value="rabbit">Rabbit</option> 
+            <option value="other">Other</option>
+            </select>
+
+            <label for="ownerName">Owner's Name:</label>
+            <input type="text" name="owner_name" id="owner_name" required>
+
+            <label for="vaccinationDate">Vaccination Date:</label>
+            <input type="date" name="vacc_date" id="vacc_date" required>
+
+            <label for="vaccinationTime">Vaccination Time:</label>
+            <input type="time" name="vacc_time" id="vacc_time" required>
+
+            <label for="email">Email Id:</label>
+            <input type="text" name="email" id="email" required />
+
+            <label for="ph_no">Phone Number:</label>
+            <input type="number" name="ph_no" id="ph_no" required />
+
+            <button type="submit">Book Vaccination</button>
+        </form>
+        <div id="confirmation"></div>
+    </div>
+    <script src="vacc.js"></script>
+</body>
+</html>

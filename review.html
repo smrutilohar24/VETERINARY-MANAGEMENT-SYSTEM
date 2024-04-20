@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Management System Review</title>
+    
+<style>
+body {
+    font-family: Times New Roman, sans-serif;
+ background-color: #1b1b32;
+    background-image: url('file:///C:/Users/Suresh/Desktop/Project%20folder/petoo.jpg');
+    color: #f5f6f7;
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.container {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #a5e4f2;
+    
+}
+
+h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #f2e1a5;
+    color: black;
+font-weight:bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.bg{
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+    <img class="bg" src="oresc.jpg">
+    <div class="container">
+        <h1>Leave a Review</h1>
+        <form id="reviewForm" action="review.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="5 (Excellent)">5 (Excellent)</option>
+                <option value="4 (Good)">4 (Good)</option>
+                <option value="3 (Average)">3 (Average)</option>
+                <option value="2 (Poor)">2 (Poor)</option>
+                <option value="1 (Very Poor)">1 (Very Poor)</option>
+            </select>
+            
+            <label for="comment">Comments:</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="review.js"></script>
+</body>
+</html>
